@@ -3,11 +3,12 @@
 // -----------------------------------------------------------------------
 
 using System.Threading.Tasks;
-using SCMS.Services.Api.Models.Foundations.Branches;
+using SCMS.Services.Api.Models.Foundations.TermsAndConditions;
 
 namespace SCMS.Services.Api.Brokers.Storages
 {
     public partial interface IStorageBroker
-    { 
+    {
+        ValueTask<TermsAndCondition> InsertTermsAndConditionAsync(TermsAndCondition termsAndCondition);
     }
 }

@@ -3,11 +3,12 @@
 // -----------------------------------------------------------------------
 
 using System.Threading.Tasks;
-using SCMS.Services.Api.Models.Foundations.Branches;
+using SCMS.Services.Api.Models.Foundations.StudentLevels;
 
 namespace SCMS.Services.Api.Brokers.Storages
 {
     public partial interface IStorageBroker
-    { 
+    {
+        ValueTask<StudentLevel> InsertStudentLevelAsync(StudentLevel studentLevel);
     }
 }
